@@ -1,0 +1,18 @@
+---
+name: practical-05
+break: true
+indent: 4
+---
+
+src/main/java/practicalfive:
+    RunForIt.java:
+        ConfirmFileExists
+        CountSingleLineComments --language Java --count 2
+        MatchFileFragment --fragment "TODO" --count 0 --exact
+        MatchFileFragment --fragment "{YOUR NAME HERE}" --count 0 --exact
+        MatchFileFragment --fragment "= new Die(6);" --count 1 --exact
+        MatchFileFragment --fragment ".roll()" --count 6 --exact
+        
+ExecuteCommand --command "gradle build"
+CountCommandOutput --command "gradle -q --console plain run" --count 1 --exact
+MatchCommandRegex --command "gradle -q --console plain run" --regex "[1-6]" --count 6 --exact
