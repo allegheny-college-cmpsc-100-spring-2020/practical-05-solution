@@ -1,6 +1,6 @@
 package practicalfive;
 
-/** Creates dice to play "Run For It"
+/** Creates dice to play "Run For It".
  *
  * @author Solutions Repository
  */
